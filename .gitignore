@@ -9,4 +9,4 @@ logs
 .DS_Store
 config.toml.bak
 config.toml.bak2
-.gitignore
+
