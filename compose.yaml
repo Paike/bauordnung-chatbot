@@ -1,10 +1,6 @@
 services:
   chatbot:
-<<<<<<< HEAD
     image: bauordnung-chatbot:latest
-=======
-    image: thegenuinedockeruser/bauordnung-chatbot:latest
->>>>>>> main
     ports:
       - "${CHAINLIT_PORT}:${CHAINLIT_PORT}"
     env_file:
