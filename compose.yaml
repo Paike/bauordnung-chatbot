@@ -1,6 +1,6 @@
 services:
   chatbot:
-    image: bauordnung-chat:latest
+    image: thegenuinedockeruser/bauordnung-chatbot:latest
     ports:
       - "${CHAINLIT_PORT}:${CHAINLIT_PORT}"
     env_file:
