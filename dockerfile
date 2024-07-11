@@ -18,7 +18,7 @@ RUN pip install -r requirements.txt
 
 COPY ["public", "/app/public"]
 COPY [".chainlit/config.toml", "/app/.chainlit/config.toml"]
-COPY ["entrypoint.sh", "bauordnung-chat.py", "scrape-extract.py", "chainlit.md", "/app/"]
+COPY ["entrypoint.sh", "bauordnung-chatbot.py", "scrape-extract.py", "chainlit.md", "/app/"]
 
 # final stage
 FROM python:3.12.2-slim AS deploy 
