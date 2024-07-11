@@ -1,0 +1,9 @@
+services:
+  chatbot:
+    image: bauordnung-chat:latest
+    ports:
+      - "${CHAINLIT_PORT}:${CHAINLIT_PORT}"
+    env_file:
+      - .env
+    volumes:
+      - ./logfiles:/app/logfiles

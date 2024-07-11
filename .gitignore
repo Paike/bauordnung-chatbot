@@ -1,0 +1,11 @@
+__pycache__
+.venv
+.cache
+.chainlit/translations
+.env
+bauordnung_nrw
+logfiles
+logs
+.DS_Store
+config.toml.bak
+config.toml.bak2
