@@ -96,13 +96,17 @@ async def on_chat_start():
             n_query_rephrases=0,
             hypothetical_answer=False,
             n_neighbor_chunks=3,
-            vecdb=lr.vector_store.QdrantDBConfig(
-                collection_name='bauordnung',
+            vecdb=lr.vector_store.ChromaDBConfig(
+                storage_path=".chroma/bauordnung/",
                 replace_collection=False,
-                storage_path='.qdrant/data/',
-                cloud=False
-
-            ),
+                cloud=False,
+            ),  
+            # vecdb=lr.vector_store.QdrantDBConfig(
+            #     collection_name='bauordnung',
+            #     replace_collection=False,
+            #     storage_path='.qdrant/data/',
+            #     cloud=False
+            # ),
             cross_encoder_reranking_model='',
             parsing=lp.ParsingConfig(  # modify as needed
                 n_similar_docs=1,
@@ -154,6 +158,9 @@ async def on_message(message: cl.Message):
         user_has_agent_name=False,
         show_subtask_response=True
     )
+    # have to add German to some prompts
+    # lr.language_models.base.generate = overrides.my_generate
+
     lr.ChainlitAgentCallbacks(front_agent, message, callback_config)
 
     # we override some functions to change the output

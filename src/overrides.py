@@ -1,5 +1,6 @@
 import langroid as lr
 from langroid.language_models.base import (
+    LLMResponse,
     LLMMessage,
     Role,
 )
@@ -76,3 +77,7 @@ def my_entity_name(
                 return lr.agent.callbacks.chainlit.YOU
         case _:
             return self.agent.config.name + f"({entity})"
+
+# base.py prompts are in english, and llm rephrases german questions to english
+# def my_generate(self, prompt: str, max_tokens: int = 200) -> LLMResponse:
+#     pass
