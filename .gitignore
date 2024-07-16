@@ -13,4 +13,5 @@ legacy
 .qdrant
 .files
 .git
-
+requirements.txt.bak
+log_files
