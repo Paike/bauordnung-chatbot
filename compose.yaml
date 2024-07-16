@@ -7,7 +7,3 @@ services:
       - .env
     volumes:
       - ./logfiles:/app/logfiles
-  watchtower:
-      image: containrrr/watchtower
-      volumes:
-        - /var/run/docker.sock:/var/run/docker.sock
