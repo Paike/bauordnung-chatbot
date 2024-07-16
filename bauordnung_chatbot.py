@@ -98,7 +98,7 @@ async def on_chat_start():
             n_neighbor_chunks=3,
             vecdb=lr.vector_store.ChromaDBConfig(
                 storage_path=".chroma/bauordnung/",
-                replace_collection=False,
+                replace_collection=True,
                 cloud=False,
             ),  
             # vecdb=lr.vector_store.QdrantDBConfig(
