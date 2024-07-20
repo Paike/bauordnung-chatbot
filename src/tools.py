@@ -2,6 +2,7 @@ import langroid as lr
 from langroid.agent.tool_message import ToolMessage
 import fitz
 import src.constants as c
+import re
 
 class DocumentTool(ToolMessage):
     request: str = "document"
@@ -10,8 +11,13 @@ class DocumentTool(ToolMessage):
     section_number: str = 1
 
     def handle(self) -> str:
-
-        filename = f"{self.folder}/paragraph_{self.section_number}.pdf"
+        section_number_clean = re.sub(r'\D', '', self.section_number)  # Remove non-digit characters
+        if not section_number_clean:
+            section_number_clean = '1'  # Default to '1' if no digits are found
+        
+        section_number_int = int(section_number_clean)  # Convert cleaned string to integer
+        
+        filename = f"{self.folder}/paragraph_{section_number_clean}.pdf"
         pdf_document = fitz.open(filename)
         markdown_lines = []
 

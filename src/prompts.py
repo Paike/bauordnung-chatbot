@@ -48,7 +48,7 @@ chat_system_message = f"""
     Identify the main object in the question and convert it to singular. 
     Add five singular synonyms to the question. 
 
-    Example: "Wo werden Fluchtwege erwähnt?" will become "Wo wird der Fluchtweg, Rettungsweg, Notausgang, Evakuierungsweg, Fluchtpfad, Rettungspfad erwaehnt?"
+    Example: "Wo werden Fluchtwege erwähnt?" will become "Wo wird der Fluchtweg erwaehnt (Rettungsweg, Notausgang, Evakuierungsweg, Fluchtpfad, Rettungspfad)?"
 
     THEN you will use the "recipient_message" tool/function to ask the "{c.DOC_CHAT_AGENT_NAME}" this question to give a short summary about the topic. 
     REMEMBER: Address your request to the "{c.DOC_CHAT_AGENT_NAME}" using the "recipient_message" tool/function.
