@@ -57,6 +57,7 @@ async def my_add_instructions(
         - "wo wird ein notwendiger Flur definiert?" 
         - "ab wieviel Etagen muss ein Gebäude einen Aufzug besitzen?"
         - "kann ich einfach so eine Neonschild aufstellen?"
+        - "Zeig mir Paragrafen 11
         - "wo finde ich ..."
 
         [Quelle: BauO NRW 2018](https://recht.nrw.de/lmi/owa/br_text_anzeigen?v_id=74820170630142752068)

@@ -17,7 +17,7 @@ class DocumentTool(ToolMessage):
         
         section_number_int = int(section_number_clean)  # Convert cleaned string to integer
         
-        filename = f"{self.folder}/paragraph_{section_number_clean}.pdf"
+        filename = f"{self.folder}/paragraph_{section_number_int}.pdf"
         pdf_document = fitz.open(filename)
         markdown_lines = []
 
